@@ -3,7 +3,6 @@
 
 class PasswordGenerationException(Exception):
     """Base exception for password generation errors."""
-    pass
 
 
 class InvalidComplexityException(PasswordGenerationException):

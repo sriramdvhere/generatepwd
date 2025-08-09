@@ -18,8 +18,8 @@ class PasswordGenerator:
         """
         if complexity == ComplexityLevel.SIMPLE:
             return SimpleComplexityStrategy.generate_password(lowercase_length)
-        elif complexity == ComplexityLevel.MEDIUM:
+        if complexity == ComplexityLevel.MEDIUM:
             return MediumComplexityStrategy.generate_password(lowercase_length, uppercase_length)
-        elif complexity == ComplexityLevel.HIGH:
+        if complexity == ComplexityLevel.HIGH:
             return HighComplexityStrategy.generate_password(lowercase_length, uppercase_length)
         return None

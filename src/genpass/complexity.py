@@ -30,7 +30,6 @@ class ComplexityStrategy(ABC):
         Returns:
             str: Generated password segment.
         """
-        pass
 
 
 class SimpleComplexityStrategy(ComplexityStrategy):

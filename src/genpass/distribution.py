@@ -33,10 +33,10 @@ class CharacterDistributionCalculator:
         if complexity == ComplexityLevel.MEDIUM:
             if length % 2 == 0:
                 return AlphaCharacterDistribution(length // 2, length // 2)
-            else:
-                uppercase_length = sum(divmod(length, 2))
-                lowercase_length = length - uppercase_length
-                return AlphaCharacterDistribution(uppercase_length, lowercase_length)
+            
+            uppercase_length = sum(divmod(length, 2))
+            lowercase_length = length - uppercase_length
+            return AlphaCharacterDistribution(uppercase_length, lowercase_length)
 
         if complexity == ComplexityLevel.HIGH:
             alpha_length = length - 2

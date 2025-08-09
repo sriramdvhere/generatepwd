@@ -12,14 +12,14 @@ class Validator(ABC):
     @staticmethod
     @abstractmethod
     def validate(value):
-        pass
+        """validate values"""
 
 
 class ComplexityValidator(Validator):
     """Validator for password complexity levels."""
 
     @staticmethod
-    def validate(complexity):
+    def validate(value):
         """Validate complexity against supported levels.
 
         Args:
@@ -28,9 +28,9 @@ class ComplexityValidator(Validator):
         Raises:
             InvalidComplexityException: If complexity is invalid or empty.
         """
-        if not any(True for item in ComplexityLevel.COMPLEXITY_LIST if complexity == item):
+        if not any(True for item in ComplexityLevel.COMPLEXITY_LIST if value == item):
             raise InvalidComplexityException()
-        if not complexity:
+        if not value:
             raise InvalidComplexityException(
                 "Complexity cannot be an empty list.")
 
@@ -39,7 +39,7 @@ class LengthValidator(Validator):
     """Validator for password length."""
 
     @staticmethod
-    def validate(length):
+    def validate(value):
         """Validate that length is an integer within allowed range.
 
         Args:
@@ -48,9 +48,9 @@ class LengthValidator(Validator):
         Raises:
             InvalidLengthException: If length is not a positive integer <= 100.
         """
-        if not isinstance(length, int):
+        if not isinstance(value, int):
             raise InvalidLengthException("Length must be an integer.")
-        if length <= 0:
+        if value <= 0:
             raise InvalidLengthException("Length must be a positive integer.")
-        if length > 100:
+        if value > 100:
             raise InvalidLengthException()
