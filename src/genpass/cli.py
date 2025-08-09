@@ -1,3 +1,5 @@
+"""CLI module for genpass: handles input parsing and command execution."""
+
 import click
 
 from .password_exceptions import PasswordGenerationException, InvalidComplexityException, InvalidLengthException
@@ -8,6 +10,15 @@ from .generator import PasswordGenerator
 
 
 def validate_input(length, complexity):
+    """Validate length and complexity inputs.
+
+    Args:
+        length (int): Desired password length.
+        complexity (str): Desired complexity level.
+
+    Returns:
+        bool: True if inputs are valid, False otherwise.
+    """
     try:
         ComplexityValidator.validate(complexity)
         LengthValidator.validate(length)
@@ -32,6 +43,12 @@ def validate_input(length, complexity):
     )
 )
 def genpass(length=12, complexity='SIMPLE'):
+    """CLI command to generate a password.
+
+    Args:
+        length (int): Length of the password (default: 12).
+        complexity (str): Complexity level: SIMPLE, MEDIUM, or HIGH (case-insensitive).
+    """
 
     complexity = complexity.upper()
 

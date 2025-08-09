@@ -1,3 +1,6 @@
+"""Module defining exceptions for password generation errors."""
+
+
 class PasswordGenerationException(Exception):
     """Base exception for password generation errors."""
     pass
