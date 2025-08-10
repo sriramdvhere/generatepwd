@@ -1,4 +1,4 @@
-# genpass
+# generatepwd
 
 A simple Python CLI tool for generating secure passwords with customizable length and complexity.
 
@@ -14,41 +14,21 @@ A simple Python CLI tool for generating secure passwords with customizable lengt
 
 ## Installation
 
-1. Clone the repository:
+- Install using pip command
 
-   ```bash
-   git clone https://github.com/yourusername/genpass.git
-   cd genpass
-   ```
-
-2. (Optional) Create and activate a virtual environment:
-
-   ```bash
-   python -m venv venv
-   venv\Scripts\activate
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. (Optional) Install as an editable package:
-
-   ```bash
-   pip install -e .
-   ```
+```bash
+pip install generatepwd
+```
 
 ## Usage
 
-- Run the CLI with default options (entry point is `cli.py`):
+- Run the CLI with default options (default length - 12, default complexity - SIMPLE):
 
 ```bash
-python -m generatepwd.cli
+generatepwd
 ```
 
-Or use the `generatepwd` entry point (if installed):
+Or use the `generatepwd`:
 
 ```bash
 generatepwd -l 16 -c HIGH
@@ -64,23 +44,6 @@ Example:
 ```bash
 generatepwd -l 20 -c medium
 # Output: Generated Password: fRLsSiPlnYaNtgpMfPQY
-```
-
-## Project Structure
-
-```
-pyproject.toml
-requirements.txt
-README.md
-src/generatepwd/
-├── cli.py               # CLI command definitions
-├── main.py              # Entry point for the application
-├── complexity.py        # Defines complexity levels and strategies
-├── distribution.py      # Calculates character distribution
-├── generator.py         # Generates password using strategies
-├── validators.py        # Validates user inputs
-├── password_exceptions.py # Custom exceptions for errors
-└── print_handler.py     # Colored CLI output handling
 ```
 
 ## Contributing
