@@ -4,18 +4,15 @@ import string
 import random
 
 from abc import ABC, abstractmethod
-from dataclasses import dataclass
-from typing import List, Tuple
 
 
-@dataclass
 class ComplexityLevel:
     """Supported password complexity levels."""
 
-    SIMPLE: str = 'SIMPLE'
-    MEDIUM: str = 'MEDIUM'
-    HIGH: str = 'HIGH'
-    COMPLEXITY_LIST: Tuple[str, str, str] = (SIMPLE, MEDIUM, HIGH)
+    SIMPLE = 'SIMPLE'
+    MEDIUM = 'MEDIUM'
+    HIGH = 'HIGH'
+    COMPLEXITY_LEVELS = (SIMPLE, MEDIUM, HIGH)
 
 
 class ComplexityStrategy(ABC):

@@ -28,7 +28,7 @@ class ComplexityValidator(Validator):
         Raises:
             InvalidComplexityException: If complexity is invalid or empty.
         """
-        if not any(True for item in ComplexityLevel.COMPLEXITY_LIST if value == item):
+        if not any(True for item in ComplexityLevel.COMPLEXITY_LEVELS if value == item):
             raise InvalidComplexityException()
         if not value:
             raise InvalidComplexityException(
