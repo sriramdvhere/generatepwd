@@ -43,7 +43,7 @@ dev = [
 ]
 
 [project.scripts]
-generatepwd = "genpass.cli:genpass"
+generatepwd = "generatepwd.cli:genpass"
 
 [project.urls]
 Homepage = "https://github.com/yourusername/genpass"
