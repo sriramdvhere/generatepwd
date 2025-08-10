@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "generatepwd"
-version = "1.0.1"
+version = "1.0.2"
 description = "A command-line password generator with customizable complexity levels"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
 authors = [
-    {name = "Your Name", email = "your.email@example.com"}
+    {name = "Sriram Dhanaraj", email = "sriramdvhere@gmail.com"}
 ]
 keywords = ["password", "generator", "cli", "security"]
 classifiers = [
@@ -46,9 +46,9 @@ dev = [
 generatepwd = "generatepwd.cli:genpass"
 
 [project.urls]
-Homepage = "https://github.com/yourusername/genpass"
-Repository = "https://github.com/yourusername/genpass"
-Issues = "https://github.com/yourusername/genpass/issues"
+Homepage = "https://github.com/sriramdvhere/generatepwd"
+Repository = "https://github.com/sriramdvhere/generatepwd"
+Issues = "https://github.com/sriramdvhere/generatepwd/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
