@@ -1,14 +1,13 @@
 """Module for calculating character distribution based on complexity levels."""
+from .password_exceptions import InvalidComplexityException
 from .complexity import ComplexityLevel
+from dataclasses import dataclass
 
-
+@dataclass
 class AlphaCharacterDistribution:
     """Represents counts of uppercase and lowercase characters for password distribution."""
-
-    def __init__(self, uppercase_length, lowercase_length):
-        self.uppercase_length = uppercase_length
-        self.lowercase_length = lowercase_length
-
+    uppercase_length: int
+    lowercase_length: int
 
 class CharacterDistributionCalculator:
     """Calculator for splitting password length into uppercase and lowercase counts based on complexity."""
@@ -33,7 +32,7 @@ class CharacterDistributionCalculator:
         if complexity == ComplexityLevel.MEDIUM:
             if length % 2 == 0:
                 return AlphaCharacterDistribution(length // 2, length // 2)
-            
+
             uppercase_length = sum(divmod(length, 2))
             lowercase_length = length - uppercase_length
             return AlphaCharacterDistribution(uppercase_length, lowercase_length)
@@ -46,4 +45,4 @@ class CharacterDistributionCalculator:
                 return AlphaCharacterDistribution(uppercase_length, lowercase_length)
             return AlphaCharacterDistribution(alpha_length // 2, alpha_length // 2)
 
-        raise ValueError("Invalid complexity level provided.")
+        raise InvalidComplexityException("Invalid complexity level provided.")

@@ -6,7 +6,7 @@ from .password_exceptions import PasswordGenerationException
 from .print_handler import PrintHandler
 from .validators import LengthValidator, ComplexityValidator
 from .distribution import CharacterDistributionCalculator
-from .generator import PasswordGenerator
+from .generator import generate_password
 
 
 def validate_input(length, complexity):
@@ -60,11 +60,11 @@ def genpass(length=12, complexity='SIMPLE'):
     uppercase_length = character_distribution.uppercase_length
     lowercase_length = character_distribution.lowercase_length
 
-    result = PasswordGenerator.generate_password(
+    result = generate_password(
         lowercase_length, uppercase_length, complexity)
 
     if not result:
         PrintHandler.print_error("Password generation failed.")
         return
 
-    PrintHandler.print_password(result)
+    PrintHandler._print_password(result)
