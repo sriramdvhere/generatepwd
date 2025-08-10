@@ -1,8 +1,7 @@
 """Module for defining complexity levels and strategies for password generation."""
 
-import string
 import random
-
+import string
 from abc import ABC, abstractmethod
 
 

@@ -2,11 +2,11 @@
 
 import click
 
-from .password_exceptions import PasswordGenerationException
-from .print_handler import PrintHandler
-from .validators import LengthValidator, ComplexityValidator
 from .distribution import CharacterDistributionCalculator
 from .generator import generate_password
+from .password_exceptions import PasswordGenerationException
+from .print_handler import PrintHandler
+from .validators import ComplexityValidator, LengthValidator
 
 
 def validate_input(length, complexity):

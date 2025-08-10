@@ -1,5 +1,6 @@
 """Module for password generation logic based on complexity strategies."""
-from .complexity import ComplexityLevel, SimpleComplexityStrategy, MediumComplexityStrategy, HighComplexityStrategy
+from .complexity import (ComplexityLevel, HighComplexityStrategy,
+                         MediumComplexityStrategy, SimpleComplexityStrategy)
 
 
 def generate_password(lowercase_length, uppercase_length, complexity):

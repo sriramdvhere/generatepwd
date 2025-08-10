@@ -1,8 +1,8 @@
 """Module for calculating character distribution based on complexity levels."""
 from dataclasses import dataclass
 
-from .password_exceptions import InvalidComplexityException
 from .complexity import ComplexityLevel
+from .password_exceptions import InvalidComplexityException
 
 
 @dataclass

@@ -2,8 +2,9 @@
 
 from abc import ABC, abstractmethod
 
-from .password_exceptions import InvalidComplexityException, InvalidLengthException
 from .complexity import ComplexityLevel
+from .password_exceptions import (InvalidComplexityException,
+                                  InvalidLengthException)
 
 
 class Validator(ABC):
