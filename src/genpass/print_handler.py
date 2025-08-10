@@ -16,7 +16,7 @@ class PrintHandler:
         click.echo(click.style(f"Error: {error}", fg='red'))
 
     @staticmethod
-    def _print_password(password):
+    def print_password(password):
         """Print the generated password in green to the CLI.
 
         Args:

@@ -67,4 +67,4 @@ def genpass(length=12, complexity='SIMPLE'):
         PrintHandler.print_error("Password generation failed.")
         return
 
-    PrintHandler._print_password(result)
+    PrintHandler.print_password(result)

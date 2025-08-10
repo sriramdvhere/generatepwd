@@ -1,13 +1,16 @@
 """Module for calculating character distribution based on complexity levels."""
+from dataclasses import dataclass
+
 from .password_exceptions import InvalidComplexityException
 from .complexity import ComplexityLevel
-from dataclasses import dataclass
+
 
 @dataclass
 class AlphaCharacterDistribution:
     """Represents counts of uppercase and lowercase characters for password distribution."""
     uppercase_length: int
     lowercase_length: int
+
 
 class CharacterDistributionCalculator:
     """Calculator for splitting password length into uppercase and lowercase counts based on complexity."""
