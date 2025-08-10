@@ -1,9 +1,11 @@
 """Module for password generation logic based on complexity strategies."""
+from typing import Union
+
 from .complexity import (ComplexityLevel, HighComplexityStrategy,
                          MediumComplexityStrategy, SimpleComplexityStrategy)
 
 
-def generate_password(lowercase_length, uppercase_length, complexity):
+def generate_password(lowercase_length: int, uppercase_length: int, complexity: str) -> Union[str, None]:
     """Generate a password string.
 
     Args:

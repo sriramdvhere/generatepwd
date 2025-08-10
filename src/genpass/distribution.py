@@ -16,7 +16,7 @@ class CharacterDistributionCalculator:
     """Calculator for splitting password length into uppercase and lowercase counts based on complexity."""
 
     @staticmethod
-    def get_upper_lower_case_length_by_complexity(complexity, length):
+    def get_upper_lower_case_length_by_complexity(complexity: str, length: int) -> AlphaCharacterDistribution:
         """Determine uppercase and lowercase counts based on complexity and total length.
 
         Args:

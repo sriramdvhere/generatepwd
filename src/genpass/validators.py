@@ -20,7 +20,7 @@ class ComplexityValidator(Validator):
     """Validator for password complexity levels."""
 
     @staticmethod
-    def validate(value):
+    def validate(value: str):
         """Validate complexity against supported levels.
 
         Args:
@@ -40,7 +40,7 @@ class LengthValidator(Validator):
     """Validator for password length."""
 
     @staticmethod
-    def validate(value):
+    def validate(value: int):
         """Validate that length is an integer within allowed range.
 
         Args:

@@ -19,7 +19,7 @@ class ComplexityStrategy(ABC):
 
     @staticmethod
     @abstractmethod
-    def generate_password(lowercase_length, uppercase_length):
+    def generate_password(lowercase_length: int, uppercase_length: int):
         """Generate password segments based on length parameters.
 
         Args:
@@ -35,7 +35,7 @@ class SimpleComplexityStrategy(ComplexityStrategy):
     """Strategy for generating simple (lowercase only) passwords."""
 
     @staticmethod
-    def generate_password(lowercase_length, uppercase_length=None):
+    def generate_password(lowercase_length: int, uppercase_length=None) -> str:
         """Generate a password with lowercase letters only.
 
         Args:
@@ -54,7 +54,7 @@ class MediumComplexityStrategy(ComplexityStrategy):
     """Strategy for generating medium complexity (mixed case) passwords."""
 
     @staticmethod
-    def generate_password(lowercase_length, uppercase_length):
+    def generate_password(lowercase_length: int, uppercase_length: int) -> str:
         """Generate a password with mixed lowercase and uppercase letters.
 
         Args:
@@ -77,7 +77,7 @@ class HighComplexityStrategy(ComplexityStrategy):
     """Strategy for generating high complexity (mixed case, digits, special) passwords."""
 
     @staticmethod
-    def generate_password(lowercase_length, uppercase_length):
+    def generate_password(lowercase_length: int, uppercase_length: int) -> str:
         """Generate a password with lowercase, uppercase, digits, and special characters.
 
         Args:

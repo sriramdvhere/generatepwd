@@ -1,5 +1,7 @@
 """Module for handling CLI output formatting for errors and passwords."""
 
+from typing import Any
+
 import click
 
 
@@ -7,7 +9,7 @@ class PrintHandler:
     """Handles the printing of errors and generated passwords in the CLI."""
 
     @staticmethod
-    def print_error(error):
+    def print_error(error: Any):
         """Print an error message in red to the CLI.
 
         Args:
@@ -16,7 +18,7 @@ class PrintHandler:
         click.echo(click.style(f"Error: {error}", fg='red'))
 
     @staticmethod
-    def print_password(password):
+    def print_password(password: str):
         """Print the generated password in green to the CLI.
 
         Args:

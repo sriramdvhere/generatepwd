@@ -9,7 +9,7 @@ from .print_handler import PrintHandler
 from .validators import ComplexityValidator, LengthValidator
 
 
-def validate_input(length, complexity):
+def validate_input(length: int, complexity: str) -> bool:
     """Validate length and complexity inputs.
 
     Args:
@@ -42,7 +42,7 @@ def validate_input(length, complexity):
         Default is SIMPLE.'''
     )
 )
-def genpass(length=12, complexity='SIMPLE'):
+def genpass(length: int = 12, complexity: str = 'SIMPLE'):
     """CLI command to generate a password.
 
     Args:
