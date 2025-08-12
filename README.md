@@ -10,7 +10,6 @@ A simple Python CLI tool for generating secure passwords with customizable lengt
   - **HIGH**: Mixed letters, digits, and special characters
 - Input validation for length (integer between 1 and 100) and complexity
 - Colored CLI output for success and error messages using `click`
-- Modular design with strategies, validators, and distribution calculator
 
 ## Installation
 
