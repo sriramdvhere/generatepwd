@@ -1,3 +1,5 @@
+"""Unit tests of generatepwd: unit tests of password generation."""
+
 from generatepwd.generator import generate_password
 from generatepwd.complexity import ComplexityLevel
 
@@ -30,6 +32,6 @@ def test_high_password_generation():
 
 
 def test_invalid_password_generation():
-    # Test invalid complexity
+    """Test invalid complexity"""
     invalid_password = generate_password(5, 0, "INVALID")
     assert invalid_password is None
